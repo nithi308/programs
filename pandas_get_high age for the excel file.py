@@ -1,0 +1,6 @@
+dt=pd.read_excel("/content/drive/MyDrive/data.xlsx")
+print(dt)
+print()
+print(dt[dt.Place =="cbe"])
+print(dt.tail(2))
+print(dt[dt.Age == dt.Age.max()])
