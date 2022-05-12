@@ -26,5 +26,7 @@ for i in range(n,n+pnear):
         break 
 if((n-pnear)>(snear-n)): 
     print(snear) 
+elif((n-pnear)==(snear-n)):
+    print(snear , pnear)
 else: 
     print(pnear) 
