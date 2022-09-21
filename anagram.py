@@ -14,3 +14,22 @@ def anagram(str1,str2):
 str1="test"
 str2="estt"
 print(anagram(str1,str2))
+
+#alternate
+
+def check(x):
+    d = {}
+    for i in x:
+        d[i] = 0
+    for i in x:
+        d[i] += 1 
+    return d
+def anagram(a,b):
+    if check(a) == check(b):
+        print("anagram")
+    else:
+        print("not")
+
+a = "test"
+b = "est t"
+anagram(a,b)
