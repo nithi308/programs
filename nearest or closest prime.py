@@ -30,3 +30,33 @@ elif((n-pnear)==(snear-n)):
     print(snear , pnear)
 else: 
     print(pnear) 
+    
+#alternate method
+
+def isPrime(x):
+    if x > 1:
+        for i in range(2,x):
+            if (x % i) == 0:
+                break 
+        else:
+            return True
+            
+n=int(input("Enter the non-negative number:"))
+if n == 2:
+    print(3)
+else:
+    for i in range(n-1,1,-1): 
+        if(isPrime(i)): 
+            pnear=i  
+            break 
+    snear=pnear+1  
+    for i in range(n+1,n+pnear): 
+        if(isPrime(i)): 
+            snear=i 
+            break 
+    if((n-pnear)>(snear-n)): 
+        print(snear) 
+    elif((n-pnear)==(snear-n)):
+        print(pnear , snear)
+    else: 
+        print(pnear)
